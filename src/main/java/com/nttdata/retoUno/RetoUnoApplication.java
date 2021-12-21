@@ -27,8 +27,11 @@ public class RetoUnoApplication implements CommandLineRunner{
 		System.out.println("---Prototype---");
 		Persona personaPrototype = persona.clone("Ana");
 		System.out.println("Persona Prototype --> " + personaPrototype.getName());
-		//Builder
 		
+		//Builder
+		System.out.println("---Builder---");
+		Persona personaBuilder = persona.build("Juan");
+		System.out.println("Persona Builder --> " + personaBuilder.getName());
 	}
 
 }

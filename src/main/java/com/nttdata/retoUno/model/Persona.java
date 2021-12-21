@@ -1,8 +1,9 @@
 package com.nttdata.retoUno.model;
 
+import com.nttdata.retoUno.build.Builder;
 import com.nttdata.retoUno.prototype.Clonar;
 
-public class Persona extends Clonar{
+public class Persona extends Clonar implements Builder{
 	
 	private static Persona persona;
 	
@@ -43,6 +44,13 @@ public class Persona extends Clonar{
 	
 	@Override
 	public Persona clone(String name) {
+		return new Persona(name);
+	}
+
+	//Builder
+	
+	@Override
+	public Persona build(String name) {		
 		return new Persona(name);
 	}
 	
